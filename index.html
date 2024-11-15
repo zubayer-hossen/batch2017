@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zubayer's 3D Video Streaming Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo.png" alt="Zubayer Logo" class="logo">
+            <h1>Zubayer's 3D Streaming</h1>
+            <button id="dark-mode-btn" class="dark-mode-btn">🌙</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="video-wrapper">
+        <iframe allow="camera; microphone; fullscreen; display-capture; autoplay" src="https://meet.jit.si/SSCBATCH2017"
+            style="height: 100%; width: 100%; border: 0px;"></iframe>
+        </div>
+
+        <div class="controls">
+            <button id="fullscreen-btn">Toggle Fullscreen</button>
+            <button id="reload-btn">Reload Meeting</button>
+        </div>
+
+        <!-- Volume Control -->
+        <div class="volume-control">
+            <label for="volume">Volume</label>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        </div>
+
+        <!-- Playback Speed Control -->
+        <div class="playback-speed">
+            <label for="speed">Playback Speed</label>
+            <select id="speed">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2x</option>
+            </select>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div id="countdown" class="countdown">
+            <h2>Next Event Starts in:</h2>
+            <div id="timer"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Zubayer's Streaming Platform | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
