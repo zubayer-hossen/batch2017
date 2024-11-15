@@ -1,0 +1,183 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    max-width: 600px;
+    width: 90%;
+}
+
+.message h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite;
+}
+
+.message p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.loader {
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-top: 5px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+.options {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* Ensures layout adapts for smaller screens */
+    text-align: left;
+}
+
+.image-container {
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    /* Adds spacing for mobile layout */
+    flex: 0 0 100px;
+    /* Fixes the width of the image container */
+}
+
+.image-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border: 5px solid transparent;
+    animation: border-animate 3s infinite;
+}
+
+.contact-info {
+    flex: 1;
+    /* Allows the contact info to adjust dynamically */
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: #4dc3ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes border-animate {
+    0% {
+        border-color: #ff6f61;
+    }
+
+    50% {
+        border-color: #ffe74c;
+    }
+
+    100% {
+        border-color: #6effbe;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .message h1 {
+        font-size: 2rem;
+    }
+
+    .message p {
+        font-size: 1rem;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: center;
+        /* Centers the content for smaller screens */
+    }
+
+    .image-container {
+        margin-right: 0;
+        /* Removes extra spacing on smaller screens */
+        margin-bottom: 10px;
+        /* Adds spacing for mobile layout */
+    }
+
+    .contact-info {
+        text-align: center;
+        /* Centers the text for smaller screens */
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .message h1 {
+        font-size: 1.8rem;
+    }
+
+    .message p {
+        font-size: 0.9rem;
+    }
+
+    .loader {
+        width: 40px;
+        height: 40px;
+    }
+
+    .image-container img {
+        width: 80px;
+        height: 80px;
+    }
+}
